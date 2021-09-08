@@ -14,7 +14,7 @@ public:
     void AddWindow(void *windowHandle);
     void FrameBegin();
     void FrameEnd();
-    void ClearFrame();
+    void FrameClear();
 };
 
 } // namespace ezn

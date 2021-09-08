@@ -42,7 +42,7 @@ void Omnirend::FrameEnd()
 
 }
 
-void Omnirend::ClearFrame()
+void Omnirend::FrameClear()
 {
     glClear(GL_COLOR_BUFFER_BIT);
 }
