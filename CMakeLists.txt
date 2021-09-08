@@ -23,6 +23,11 @@ add_library(${BIN_NAME} ${OMNIREND_LIB_TYPE} ${src_files} ${inc_files})
 ###
 set(EXTERNAL_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external")
 
+# opengl
+set(OpenGL_GL_PREFERENCE GLVND)
+find_package(OpenGL REQUIRED)
+set(linked_libs "${linked_libs}" OpenGL::GL)
+
 # imgui
 set(IMGUI_PATH "${EXTERNAL_DIR}/imgui")
 file(GLOB imgui_src "${IMGUI_PATH}/*.cpp" "${IMGUI_PATH}/*.h")
