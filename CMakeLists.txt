@@ -37,7 +37,7 @@ set(imgui_src "${imgui_src}" "${IMGUI_BACKENDS_DIR}/imgui_impl_opengl3.h" "${IMG
 set(EZN_OMNIREND_IMGUI_LIB_TYPE SHARED CACHE STRING "Type of lib ImGui should compile to, e.g. SHARED, STATIC, etc.")
 add_library(imgui ${EZN_OMNIREND_IMGUI_LIB_TYPE} ${imgui_src})
 target_include_directories(imgui PUBLIC "${IMGUI_PATH}" "${IMGUI_BACKENDS_DIR}")
-target_link_libraries(imgui glfw)
+target_link_libraries(imgui glfw OpenGL::GL)
 
 set(linked_libs "${linked_libs}" imgui)
 
